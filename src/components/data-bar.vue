@@ -1,7 +1,8 @@
 <template>
 	<div class="data" id="data">
-		<h4 class="subtitle is-6">{{ month }} {{ day }} of {{ year }} {{ ruta }}</h4>
+		<h4 class="subtitle is-6">{{ month }} {{ day }} of {{ year }}</h4>
 		<hr>
+		<h4 class="subtitle is-6 center">ALWAYS FRESH</h4>
 	</div>
 </template>
 
@@ -28,6 +29,7 @@ export default{
 
 <style>
 	.data{
+		width: 100%;
 		display: flex;
 		z-index: 1;
 		position: absolute;
@@ -35,7 +37,7 @@ export default{
 	}
 	hr{
 		background: #f5f5f5;
-		height: 2px;
+		height: 1px;
 		width: 100px;
 		border: none;
 	}
@@ -50,5 +52,10 @@ export default{
 	}
 	hr:hover{
 		background: aqua;
+	}
+	.data .center{
+		position: absolute;
+		left: calc(50% - (120.4px / 2));
+		font-weight: bold;
 	}
 </style>
